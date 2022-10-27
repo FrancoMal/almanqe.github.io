@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+.allLanding {
+    max-width: 390px;
+}
+.landingStart {
+    text-align: center;
+    max-width: 330px;
+    padding-left: 3rem;
+}
+
+.listMonthYear {
+    display: grid;
+    grid-template-areas: 
+    "Mes Año";
+    max-width: 350px;
+    font-weight: bold;
+}
+/* 715aff */
+/* b24c63
+357ded
+5438dc */
+/* dc851f */
+/* e3170a */
+/* ed33b9 */
+/* ff2e00 */
+/* <font color="#59114d">X</font>
+<font color="#b24c63">Día </font>
+<font color="#ffb100"> N°Mes</font>
+<font color="#357ded">Año</font>
+<font color="#32e875"> N°Siglo </font> 
+<font color="#e3170a">7</font>
+<font color="#dc851f">S </font>*/
+.monthList {
+    list-style: none;
+    grid-area: "Mes";
+    
+    color:black;
+    background-color: #ffb100;
+    padding-right: 2rem;
+    min-width: 7.6rem;
+    max-width: 300px;
+}
+.yearList {
+    list-style: none;
+    grid-area: "Año";
+    color:black;
+    background-color: #32e875;
+    background-position: right 30%;
+    padding-left: 1rem;
+}
+.ecuacionPag {
+    font-size: 1rem;
+}
+h1 {
+    list-style: none;
+    text-align: center;
+    list-style: none;
+}
+.firstStep {
+    background-color: #457b9d;
+    list-style: none;
+}
+.secondStep {
+    background-color: #77abbd;
+    list-style: none;
+}
+.thirdStep {
+    background-color: #a8dadc;
+    list-style: none;
+}
+.fourthStep {
+    background-color: #cdeae5;
+    list-style: none;
+    
+}
+.fourthStep li {
+    list-style: none;
+    color: #dc851f;
+    font-weight: bold;
+}
+.recomend {
+    background-color: #f1faee;
+    list-style: none;
+}
+.allLanding font {
+    font-weight: bold;
+}
+h4 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+h2 {
+    padding-left: 1rem;
+}
+.fullPractice {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+button {
+    padding: 1px;
+}

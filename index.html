@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Landing.module.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="allLanding">
+        <div class="landingStart">
+          <h1>Bienvenidos a simulador práctica fechas.</h1>
+          <p>Saber el día que cayó una fecha es muy sencillo, hay un algoritmo matématico detrás de todo y aquí te voy a enseñar cómo hacerlo y cómo hacerlo rápido.</p>
+        </div>
+        <div class="fullList">
+          <ul>
+            <li class="firstStep">
+              <div >
+              <h1>Primer Paso</h1>
+              <h4> Para comprender los componentes de la fórmula siguen las aclaraciones del <font color="#ffb100"> N°Mes</font> y <font color="#32e875"> N°Siglo </font>:</h4>
+                <div class="listMonthYear">
+                <ul class="monthList">
+                  <h3>Meses</h3>
+                  <li>Enero 1 = 0</li>
+                  <li>Febrero 2 = 3</li>
+                  <li>Marzo 3 = 3</li>
+                  <li>Abril 4 = 6</li>
+                  <li>Mayo 5 = 1</li>
+                  <li>Junio 6 = 4</li>
+                  <li>Julio 7 = 6</li>
+                  <li>Agosto 8 = 2</li>
+                  <li>Septiembre 9 = 5</li>
+                  <li>Octubre 10 = 0</li>
+                  <li>Noviembre 11 = 3</li>
+                  <li>Diciembre 12 = 5</li>
+                </ul>
+                <ul class="yearList">
+                  <h3>Siglos</h3>
+                  <li>1600 = 6</li>
+                  <li>1700 = 4</li>
+                  <li>1800 = 2</li>
+                  <li>1900 = 0</li>
+                  <li>2000 = 6</li>
+                  <li>y se repite la secuencia...</li>
+                </ul>
+                </div>
+                </div>
+            </li>
+            <li class="secondStep">
+              <h1>Segundo Paso</h1>
+              <h4> Se comineza planteando la ecuación; cuando se plantea el año en la ecuacion principal solo se colocan los ultimos <font color="#357ded">2</font> dígitos:</h4> 
+                 <h2 class="ecuacionPag"><font color="#59114d">X</font>  = <font color="#b24c63">Día </font> + <font color="#ffb100"> N°Mes</font> + <font color="#357ded">Año</font> + <font color="#357ded">Año</font>/4 + <font color="#32e875"> N°Siglo </font></h2>
+                 <h5>Ej: 17/03/2004</h5>
+                 <h2><font color="#59114d">X</font> = <font color="#b24c63">17 </font> + <font color="#ffb100"> 3</font> + <font color="#357ded">04</font> + <font color="#357ded">04</font>/4 + <font color="#32e875">6</font></h2>
+              
+            </li>
+            
+            <li class="thirdStep">
+              <h1>Tercer Paso</h1>
+              <h4>Con la fórmula anterior se sumaran todos los dias del año, luego de esto se debe dividir por <font color="#e3170a">7</font> y obtener el resto, ese sera nuestro numero clave.</h4>
+                <h2><font color="#dc851f">S </font> = <font color="#59114d">X</font> % <font color="#e3170a">7</font></h2>
+                <h2><font color="#dc851f">S </font> = <font color="#59114d">31</font> % <font color="#e3170a">7</font> = <font color="#dc851f">3 </font></h2>
+            </li>
+            <li class="fourthStep">
+              <h1>Cuarto Paso</h1>
+              <h4>Una vez obtenido el dia de la semana, solo queda identificarlo:</h4>
+              <ul class="weekList">
+                <li>Domingo = 0</li>
+                <li>Lunes = 1</li>
+                <li>Martes = 2</li>
+                <li>Miércoles = 3</li>
+                <li>Jueves = 4</li>
+                <li>Viernes = 5</li>
+                <li>Sábado = 6</li>
+                <h2><font color="#dc851f">S </font> = <font color="#dc851f">3</font> = <font color="#dc851f">Miércoles </font></h2>
+              </ul>
+            </li>
+            <li class="recomend">
+              <h2>Y así se obtiene el día de la semana, a continuación habra una serie de recomendaciones para poder realizar el cálculo de manera más rápida.</h2>
+              <h4>La primera recomendación es restar los múltiplos de <font color="#e3170a">7</font> lo antes posible para no tener que dividir la suma final:</h4>
+              <h2><font color="#dc851f">S</font> = <font color="#b24c63">17 </font>-<font color="#e3170a"> 14</font> = 3 + <font color="#ffb100">3</font> = 6 + <font color="#357ded">4</font> = 10 - <font color="#e3170a">7</font> = 3 + <font color="#357ded">4</font>/4 = 4 + <font color="#32e875"> 6 </font> = 10 - <font color="#e3170a">7</font> = <font color="#dc851f">3</font> = <font color="#dc851f">Miércoles</font></h2>
+              <h4>La segunda recomendación es tener preparado la suma del año, siglo y el biciesto</h4>
+              <h2><font color="#357ded">2004</font> = <font color="#357ded">4</font> + <font color="#357ded">4</font>/4 + <font color="#32e875"> 6 </font> = <font color="#080357">11</font></h2>
+              <h4>A su vez restamos <font color="#e3170a">7</font> como en la primera recomendación:</h4>
+              <h2><font color="#357ded">2004</font> = <font color="#080357">11</font> - <font color="#e3170a">7</font> = <font color="#ed33b9">4</font></h2>
+              <h4>En otro apartado de la página encontrarán los distintos años y su mayor simplificación</h4>
+              <h4>Teniendo en cuenta estas dos recomendaciones ya nos ahorra mucho tiempo, sólo queda sumar el día y el N° del mes</h4>
+              <h2><font color="#b24c63">17 </font>-<font color="#e3170a"> 14</font> = 3 + <font color="#ffb100"> 3</font> = 6 + <font color="#ed33b9">4</font> = 10 - <font color="#e3170a">7</font> = <font color="#dc851f">3</font> = <font color="#dc851f">Miércoles</font></h2>
+            </li>
+          </ul>
+        </div>
+        <div class="fullPractice">
+            <button onClick="createDate()">Generar fecha</button>
+            <p id="newD"></p>
+            <form id="weekButtons">
+            <input type="button" value="Domingo" id="dom" onClick="handleOnsubmitDom()">
+            <input type="button" value="Lunes" id="lun" onClick="handleOnsubmitLun()">
+            <input type="button" value="Martes" id="mar" onClick="handleOnsubmitMar()">
+            <input type="button" value="Miércoles" id="mie" onClick="handleOnsubmitMie()">
+            <input type="button" value="Jueves" id="jue" onClick="handleOnsubmitJue()">
+            <input type="button" value="Viernes" id="vie" onClick="handleOnsubmitVie()">
+            <input type="button" value="Sábado" id="sab" onClick="handleOnsubmitSab()">
+            <!-- </form>input type="button" <form onSubmit="handleOnsbumit()"> -->
+                <!-- <input type="submit"/>
+            </form> --> -->
+            <!-- <h3 onClick="result()"></h3> -->
+            <h3 id="result"></h3>
+            <h4>Tardaste <h4 id="time"></h4> segundos</h4>
+        </div>
+        </div>
+        <script>
+
+function Siglo(Año) {
+  Sig = Math.floor(Año / 100);
+  switch (Sig) {
+    case 20: {
+      return 6;
+    }
+    case 19: {
+      return 0;
+    }
+    case 18: {
+      return 2;
+    }
+    case 17: {
+      return 4;
+    }
+    case 16: {
+      return 6;
+    }
+  }
+}
+
+function NuMes(Mes) {
+  switch (Mes) {
+    case 1: return 0; case 2: return 3; case 3: return 3; case 4: return 6; case 5: return 1;case 6: return 4; case 7: return 6; case 8: return 2; case 9: return 5; case 10: return 0; case 11: return 3; case 12: return 5;
+    
+  }
+}
+
+function randomDate() {
+  function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+  Año = Math.trunc(getRandomArbitrary(1950, 2040));
+  Mes = Math.trunc(getRandomArbitrary(1, 12));
+  Dia = 0;
+  if (Mes == 2) {
+    Dia = Math.trunc(getRandomArbitrary(1, 28));
+  } else Dia = Math.trunc(getRandomArbitrary(1, 31));
+  
+}
+
+function calcularDia(Dia, Mes, Año) {
+  Last2Dig = Año.toString().slice(-2);
+  Qua = parseInt(Last2Dig) / 4;
+  dif = 0;
+  if (Last2Dig % 4 == 0 && (Mes == 01 || Mes == 02)) {
+    dif = 1;
+  }
+
+  SumaDia =
+    Dia + NuMes(Mes) + Siglo(Año) + Math.floor(Qua) - dif + parseInt(Last2Dig);
+  Day = SumaDia % 7;
+  switch (Day) {
+    case 0:
+      diaSem = "Domingo";
+      break;
+    case 1:
+      diaSem = "Lunes";
+      break;
+    case 2:
+      diaSem = "Martes";
+      break;
+    case 3:
+      diaSem = "Miercoles";
+      break;
+    case 4:
+      diaSem = "Jueves";
+      break;
+    case 5:
+      diaSem = "Viernes";
+      break;
+    case 6:
+      diaSem = "Sabado";
+      break;
+  }
+}
+
+function calcularFecha() {
+  randomDate();
+  calcularDia(Dia, Mes, Año);
+//   console.log(Dia + " " + Mes + " " + Año);
+  // console.log(diaSem)
+}
+
+
+function gameDay() {
+  const start = new Date();
+  // El código a medir
+
+  calcularFecha();
+
+  const readline = require("readline");
+
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+  rl.question(`${Dia}-${Mes}-${Año}, Qué día cayó? `, function (answer) {
+    if (answer) {
+      if (diaSem.toLowerCase() == answer.toLowerCase()) {
+        console.log(`Correcto, cayó el día ${diaSem} `);
+      } else {
+        console.log(`Incorrecto, cayó el día ${diaSem} `);
+      }
+      rl.close();
+      const end = new Date() - start;
+      endi = end / 1000;
+      console.log(`Tardaste ${endi} segundos`);
+    } else console.log("no paso answer");
+  });
+}
+// gameDay();
+const fecha = undefined;
+function createDate() {
+    randomDate();
+    document.getElementById("result").innerHTML = ""
+    document.getElementById("newD").innerHTML = `${Dia}-${Mes}-${Año}, Qué día cayó? `;
+    start = new Date();
+    calcularDia(Dia, Mes, Año);
+}
+
+function daySelect() {
+    const end = new Date() - start;
+    endi = end / 1000;
+    document.getElementById("time").innerHTML = endi;
+}
+function handleOnsubmitMar(){
+    const end = new Date() - start;
+    endi = end / 1000;
+    document.getElementById("time").innerHTML = endi;
+    if (diaSem === document.getElementById("mar").value) {
+        document.getElementById("result").innerHTML = "Correcto"
+      } else {
+        document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+      }
+}
+function handleOnsubmitDom(){
+    const end = new Date() - start;
+    endi = end / 1000;
+    document.getElementById("time").innerHTML = endi;
+    if (diaSem === document.getElementById("dom").value) {
+        document.getElementById("result").innerHTML = "Correcto"
+      } else {
+        document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+      }
+}
+function handleOnsubmitLun(){
+    const end = new Date() - start;
+    endi = end / 1000;
+    document.getElementById("time").innerHTML = endi;
+    if (diaSem === document.getElementById("lun").value) {
+        document.getElementById("result").innerHTML = "Correcto"
+      } else {
+        document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+      }
+}
+function handleOnsubmitMie(){
+    const end = new Date() - start;
+    endi = end / 1000;
+    document.getElementById("time").innerHTML = endi;
+    if (diaSem === document.getElementById("mie").value) {
+        document.getElementById("result").innerHTML = "Correcto"
+      } else {
+        document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+      }
+}
+function handleOnsubmitJue(){
+    const end = new Date() - start;
+    endi = end / 1000;
+    document.getElementById("time").innerHTML = endi;
+    if (diaSem === document.getElementById("jue").value) {
+        document.getElementById("result").innerHTML = "Correcto"
+      } else {
+        document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+      }
+}
+function handleOnsubmitVie(){
+    const end = new Date() - start;
+    endi = end / 1000;
+    document.getElementById("time").innerHTML = endi;
+    if (diaSem === document.getElementById("vie").value) {
+        document.getElementById("result").innerHTML = "Correcto"
+      } else {
+        document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+      }
+}
+function handleOnsubmitSab(){
+    const end = new Date() - start;
+    endi = end / 1000;
+    document.getElementById("time").innerHTML = endi;
+    if (diaSem === document.getElementById("sab").value) {
+        document.getElementById("result").innerHTML = "Correcto"
+      } else {
+        document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+      }
+}
+        </script>
+</body>
+</html>
