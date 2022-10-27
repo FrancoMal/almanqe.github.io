@@ -50,7 +50,7 @@
             </li>
             <li class="secondStep">
               <h1>Segundo Paso</h1>
-              <h4> Se comineza planteando la ecuación; cuando se plantea el año en la ecuacion principal solo se colocan los ultimos <font color="#357ded">2</font> dígitos:</h4> 
+              <h4> Se comineza planteando la ecuación; cuando se plantea el año en la ecuacion principal solo se colocan los ultimos <font color="#357ded">2</font> dígitos, si es año biciesto, y es enero o febrero se resta 1</h4> 
                  <h2 class="ecuacionPag"><font color="#59114d">X</font>  = <font color="#b24c63">Día </font> + <font color="#ffb100"> N°Mes</font> + <font color="#357ded">Año</font> + <font color="#357ded">Año</font>/4 + <font color="#32e875"> N°Siglo </font></h2>
                  <h5>Ej: 17/03/2004</h5>
                  <h2><font color="#59114d">X</font> = <font color="#b24c63">17 </font> + <font color="#ffb100"> 3</font> + <font color="#357ded">04</font> + <font color="#357ded">04</font>/4 + <font color="#32e875">6</font></h2>
@@ -85,26 +85,30 @@
               <h2><font color="#357ded">2004</font> = <font color="#357ded">4</font> + <font color="#357ded">4</font>/4 + <font color="#32e875"> 6 </font> = <font color="#080357">11</font></h2>
               <h4>A su vez restamos <font color="#e3170a">7</font> como en la primera recomendación:</h4>
               <h2><font color="#357ded">2004</font> = <font color="#080357">11</font> - <font color="#e3170a">7</font> = <font color="#ed33b9">4</font></h2>
-              <h4>En otro apartado de la página encontrarán los distintos años y su mayor simplificación</h4>
+              <h4>En otro apartado de la <a href="./pages/años.html">página</a> encontrarán los distintos años y su mayor simplificación</h4>
               <h4>Teniendo en cuenta estas dos recomendaciones ya nos ahorra mucho tiempo, sólo queda sumar el día y el N° del mes</h4>
               <h2><font color="#b24c63">17 </font>-<font color="#e3170a"> 14</font> = 3 + <font color="#ffb100"> 3</font> = 6 + <font color="#ed33b9">4</font> = 10 - <font color="#e3170a">7</font> = <font color="#dc851f">3</font> = <font color="#dc851f">Miércoles</font></h2>
             </li>
           </ul>
         </div>
         <div class="fullPractice">
+            <h3>Seleccionar fechas</h3>
+            <input type="text" list="cars" />
+
+            <input type="year">
             <button onClick="createDate()">Generar fecha</button>
             <p id="newD"></p>
             <form id="weekButtons">
             <input type="button" value="Domingo" id="dom" onClick="handleOnsubmitDom()">
             <input type="button" value="Lunes" id="lun" onClick="handleOnsubmitLun()">
             <input type="button" value="Martes" id="mar" onClick="handleOnsubmitMar()">
-            <input type="button" value="Miércoles" id="mie" onClick="handleOnsubmitMie()">
+            <input type="button" value="Miercoles" id="mie" onClick="handleOnsubmitMie()">
             <input type="button" value="Jueves" id="jue" onClick="handleOnsubmitJue()">
             <input type="button" value="Viernes" id="vie" onClick="handleOnsubmitVie()">
-            <input type="button" value="Sábado" id="sab" onClick="handleOnsubmitSab()">
+            <input type="button" value="Sabado" id="sab" onClick="handleOnsubmitSab()">
             <!-- </form>input type="button" <form onSubmit="handleOnsbumit()"> -->
                 <!-- <input type="submit"/>
-            </form> --> -->
+            </form> -->
             <!-- <h3 onClick="result()"></h3> -->
             <h3 id="result"></h3>
             <h4>Tardaste <h4 id="time"></h4> segundos</h4>
@@ -308,6 +312,46 @@ function handleOnsubmitSab(){
         document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
       }
 }
+// function handleOnsubmit(){
+//     const end = new Date() - start;
+//     endi = end / 1000;
+//     document.getElementById("time").innerHTML = endi;
+//     if (diaSem === document.getElementById("mar").value) {
+//         document.getElementById("result").innerHTML = "Correcto"
+//       } else {
+//         document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+//       }
+//     if (diaSem === document.getElementById("dom").value) {
+//         document.getElementById("result").innerHTML = "Correcto"
+//       } else {
+//         document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+//       }
+//     if (diaSem === document.getElementById("lun").value) {
+//         document.getElementById("result").innerHTML = "Correcto"
+//       } else {
+//         document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+//       }
+//     if (diaSem === document.getElementById("mie").value) {
+//         document.getElementById("result").innerHTML = "Correcto"
+//       } else {
+//         document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+//       }
+//     if (diaSem === document.getElementById("jue").value) {
+//         document.getElementById("result").innerHTML = "Correcto"
+//       } else {
+//         document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+//       }
+//     if (diaSem === document.getElementById("vie").value) {
+//         document.getElementById("result").innerHTML = "Correcto"
+//       } else {
+//         document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+//       }
+//     if (diaSem === document.getElementById("sab").value) {
+//         document.getElementById("result").innerHTML = "Correcto"
+//       } else {
+//         document.getElementById("result").innerHTML = `Incorrecto cayó el día ${diaSem}`
+//       }
+// }
         </script>
 </body>
 </html>

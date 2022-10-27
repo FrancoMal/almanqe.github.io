@@ -48,7 +48,7 @@ function NuMes(Mes) {
   }
 }
 
-export function randomDate() {
+function randomDate() {
   function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
   }
@@ -155,3 +155,16 @@ function gameDay() {
 }
 // gameDay();
 
+function calcularAños() {
+  for (let i = 1700; i < 1800; i++) {
+  Año = i;
+  var casi = 0;
+    Last2Dig = Año.toString().slice(-2);
+  Qua = parseInt(Last2Dig) / 4;
+  var casi = Siglo(Año) + Math.floor(Qua) + parseInt(Last2Dig) ;
+  console.log(Año + " = " + casi % 7);
+   
+  }
+  return casi % 7; 
+}
+calcularAños()

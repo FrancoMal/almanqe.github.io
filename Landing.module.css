@@ -50,7 +50,7 @@ body {
     color:black;
     background-color: #ffb100;
     padding-right: 2rem;
-    min-width: 7.6rem;
+    min-width: 8.600000000000001rem;
     max-width: 300px;
 }
 .yearList {
@@ -106,9 +106,11 @@ h2 {
     padding-left: 1rem;
 }
 .fullPractice {
+    
     text-align: center;
     padding-bottom: 2rem;
 }
 button {
     padding: 1px;
 }
+
