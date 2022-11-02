@@ -5,7 +5,7 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  
+    
   }
   
   code {
@@ -95,6 +95,9 @@ h1 {
     background-color: #f1faee;
     list-style: none;
 }
+.proc {
+    text-align: center;
+}
 .allLanding font {
     font-weight: bold;
 }
@@ -114,3 +117,9 @@ button {
     padding: 1px;
 }
 
+.proc p {
+    font-weight: bold;
+}
+.timing {
+  display: inline;  
+}
