@@ -104,9 +104,15 @@ h1 {
 h4 {
     padding-left: 2rem;
     padding-right: 2rem;
+    
 }
 h2 {
     padding-left: 1rem;
+}
+a {
+    /* text-decoration: none; */
+    color: #F75590;
+    font-weight: bolder;
 }
 .fullPractice {
     
